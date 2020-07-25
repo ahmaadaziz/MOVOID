@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &413483602172214024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8793297939698468283}
+  - component: {fileID: 8669303169898323451}
+  - component: {fileID: 1280939301992494776}
+  m_Layer: 0
+  m_Name: Spawn Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8793297939698468283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413483602172214024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8, y: -0.57, z: 15.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6150697808529095988}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8669303169898323451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413483602172214024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1280939301992494776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413483602172214024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8528e7b0288b6cc48957394238c77c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 1943208158142411091, guid: c41d3f5b690c4f84683299b64ad177a2, type: 3}
+  - {fileID: 4725983123931646609, guid: 4133cf6ee7573c243aedabc5e048560a, type: 3}
+  - {fileID: 3873676167828091173, guid: 55ebfdd826f5f304ba98d58c043fcb35, type: 3}
+  - {fileID: 2493836287809023369, guid: b0ef5a6ab82b72c43917a725ac39ff46, type: 3}
+  - {fileID: 3996821211925398531, guid: 30495f74a51a0014cbd2c5532fb45e29, type: 3}
+  - {fileID: 6189192927958781255, guid: 1caef46d27d0c3d45b4c4bc690e9bc5a, type: 3}
+  - {fileID: 7360793957685212619, guid: 1c2379e2cbd402a48ad648a1cd0c4c56, type: 3}
+  - {fileID: 2279103792621320693, guid: 536e668264ac3934f981bfc975a9448f, type: 3}
+  - {fileID: 6162493703808598160, guid: 488695d6ca0a03c4d9adde702363bd8a, type: 3}
+  - {fileID: 6217097454478527779, guid: 1ba04de185ea66a42b1512c94f62c4f5, type: 3}
+  - {fileID: 1491982077764706393, guid: 614648883828a5a4abacdaf0561444a3, type: 3}
+--- !u!1 &3740872528514240931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6150697808529095988}
+  - component: {fileID: 1613001470295979873}
+  - component: {fileID: 1334367295456369355}
+  m_Layer: 0
+  m_Name: Level Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6150697808529095988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740872528514240931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.533161, y: -5.552793, z: -32.257236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8793297939698468283}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1613001470295979873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740872528514240931}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 1}
+  m_Center: {x: 8, y: 1, z: 74.5}
+--- !u!114 &1334367295456369355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740872528514240931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93eb4fa764c316645bf4a4425b1359cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

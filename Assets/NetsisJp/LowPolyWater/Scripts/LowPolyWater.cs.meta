@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6e2d71a5907073045bff6767c7965747
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lowPolyWaterMaterial: {fileID: 2100000, guid: 2e50b4822be8ba247a898afb94537d1f,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
