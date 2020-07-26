@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 using EZCameraShake;
 public class GameController : MonoBehaviour
 {
+    public Button pauseButton;
     private CanvasGroup hbarCanvas;
     private bool restartStarted;
+    public bool vibrate;
     private ParticleSystem explosion;
     public bool decHealth = false;
      private NumberAnimation numberAnimation;
@@ -25,7 +28,7 @@ public class GameController : MonoBehaviour
          currentHealth = maxHealth;
          healthBar.SetMaxHealth(maxHealth);
          numberAnimation = gameObject.GetComponent<NumberAnimation>();
-         damageAmount = 5f * Time.unscaledDeltaTime;
+         damageAmount = 2f * Time.unscaledDeltaTime;
          decHealth = false;
          restartStarted = true;
      }
@@ -39,6 +42,10 @@ public class GameController : MonoBehaviour
         {
             restartStarted = false;
             StartCoroutine(Restart());
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            pauseButton.onClick.Invoke();
         }
      }
      public void IncreaseHighScore(float score)
@@ -58,11 +65,16 @@ public class GameController : MonoBehaviour
     IEnumerator Restart()
     {
         explosion.Play(true);
+        Handheld.Vibrate();
         CameraShaker.Instance.ShakeOnce(4f,4f,0.1f,1f);
         playerCube.SetActive(false);
         LeanTween.alphaCanvas(hbarCanvas,0.0f,0.01f);
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene(0);
         StopCoroutine("Restart");
+    }
+    public void SetVibration(bool shouldVibrate)
+    {
+        vibrate = shouldVibrate;
     }
 }

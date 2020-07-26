@@ -51,4 +51,8 @@ public class MenuButtons : MonoBehaviour
         gameController.decHealth = true;
         passSphere.decSize = true;
     }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }

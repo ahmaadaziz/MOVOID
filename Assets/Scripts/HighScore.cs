@@ -18,11 +18,12 @@ public class HighScore : MonoBehaviour
         {
             PlayerPrefs.SetFloat("HighScore",gameController.HighScore);
             highScore.text = numberAnimation.desiredNumber.ToString("#.##");
-            //if (PlayerPrefs.GetString("Fireworksplayed","no") == "no")
-            //{
-                //StartCoroutine("PlayVFX");
-                //PlayerPrefs.SetString("Fireworksplayed","yes");
-            //}
+            if (PlayerPrefs.GetString("Fireworksplayed","no") == "no")
+            {
+                highScore.fontStyle = TMPro.FontStyles.Underline;
+                highScore.color = new Color32(205,102,77,255);
+                PlayerPrefs.SetString("Fireworksplayed","yes");
+            }
         }    
     }
 }

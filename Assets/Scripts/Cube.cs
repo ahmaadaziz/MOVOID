@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 public class Cube : MonoBehaviour
 {
     public bool changeProfile;

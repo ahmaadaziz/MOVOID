@@ -30,6 +30,10 @@ public class PassSphere : MonoBehaviour
     {
         gameController.IncreaseHighScore(transform.localScale.x);
         gameController.ResetHealth();
+        if (gameController.vibrate)
+        {
+            Handheld.Vibrate();
+        }
     }
     private void OnTriggerExit(Collider other) 
     {
