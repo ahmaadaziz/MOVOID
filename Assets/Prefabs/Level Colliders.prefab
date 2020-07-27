@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - {fileID: 1943208158142411091, guid: c41d3f5b690c4f84683299b64ad177a2, type: 3}
+  - {fileID: 0}
   - {fileID: 4725983123931646609, guid: 4133cf6ee7573c243aedabc5e048560a, type: 3}
   - {fileID: 3873676167828091173, guid: 55ebfdd826f5f304ba98d58c043fcb35, type: 3}
   - {fileID: 2493836287809023369, guid: b0ef5a6ab82b72c43917a725ac39ff46, type: 3}
@@ -94,7 +94,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3740872528514240931}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.533161, y: -5.552793, z: -32.257236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

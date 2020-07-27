@@ -28,15 +28,16 @@ public class GameController : MonoBehaviour
          currentHealth = maxHealth;
          healthBar.SetMaxHealth(maxHealth);
          numberAnimation = gameObject.GetComponent<NumberAnimation>();
-         damageAmount = 2f * Time.unscaledDeltaTime;
+         damageAmount = 5f;
          decHealth = false;
          restartStarted = true;
+         vibrate = true;
      }
      private void FixedUpdate() 
      {
-        if (!cube.isMoving && decHealth)
+        if (cube.isMoving && decHealth)
         {
-            TakeDamage(damageAmount); 
+            TakeDamage(damageAmount * Time.unscaledDeltaTime); 
         }
         if (currentHealth < 0 && restartStarted)
         {

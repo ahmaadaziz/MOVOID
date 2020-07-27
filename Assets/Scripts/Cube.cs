@@ -51,7 +51,7 @@ public class Cube : MonoBehaviour
                 }
             } 
         }
-        if (mV > 0)
+        if (mV != 0 || mH != 0)
         {
             isMoving = true;
         }

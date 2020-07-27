@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 69
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3758952801434548957
 Transform:
@@ -46,7 +46,7 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 10, y: 15.18, z: 10}
+  m_BoxSize: {x: 21.5, y: 32.1, z: 20}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000

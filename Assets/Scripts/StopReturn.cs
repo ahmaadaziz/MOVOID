@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 public class StopReturn : MonoBehaviour
 {
-    private BoxCollider boxCollider;
+    public BoxCollider boxCollider;
     private void Start() 
     {
-        boxCollider = gameObject.GetComponent<BoxCollider>();
+        if (boxCollider.isTrigger == false)
+        {
+            boxCollider.isTrigger = true;
+        }
     }
     private void OnTriggerExit(Collider other) 
     {
