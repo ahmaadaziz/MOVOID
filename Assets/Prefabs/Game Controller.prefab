@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aa9d4217a3cf94a9ba0578836431a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level0: {fileID: 1943208158142411091, guid: c41d3f5b690c4f84683299b64ad177a2, type: 3}
   pauseButton: {fileID: 0}
   vibrate: 0
   decHealth: 0

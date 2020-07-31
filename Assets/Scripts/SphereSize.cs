@@ -7,7 +7,7 @@ public class SphereSize : MonoBehaviour
     private float scale;
     void Update()
     {
-         scale = transform.localScale.x;
-         sizeText.text = scale.ToString("#.##");
+        scale = transform.localScale.x;
+        sizeText.text = scale.ToString("#.##");
     }
 }

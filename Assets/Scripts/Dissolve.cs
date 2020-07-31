@@ -8,7 +8,6 @@ public class Dissolve : MonoBehaviour
     private float t = 0;
     void Start()
     {
-        whenTo = GameObject.FindGameObjectWithTag("Dissolve Collider").GetComponent<WhenToDissolve>();
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
     }
     private void Update() 

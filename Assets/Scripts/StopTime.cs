@@ -10,7 +10,8 @@ public class StopTime : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         cube.isTimeStopped = true;
-        StartCoroutine("IStopTime");
+        StopCoroutine(IStopTime());
+        StartCoroutine(IStopTime());
     }
     private void OnTriggerExit(Collider other) {
         Destroy(gameObject);
@@ -21,6 +22,6 @@ public class StopTime : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1f;
         cube.isTimeStopped = false;
-        StopCoroutine("StopTime");
+        StopCoroutine(IStopTime());
     }
 }

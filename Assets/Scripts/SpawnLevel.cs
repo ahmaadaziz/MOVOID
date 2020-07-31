@@ -31,7 +31,6 @@ public class SpawnLevel : MonoBehaviour
              cube.i++;
          }
          cube.incPosBy = cube.incPosBy + 82f;
-         Debug.Log("Increment");
          Destroy(gameObject);
     }
     private void SpawnNxtLvl(int index)

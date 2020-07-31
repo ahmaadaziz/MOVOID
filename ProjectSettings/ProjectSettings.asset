@@ -61,9 +61,9 @@ PlayerSettings:
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
-  use32BitDisplayBuffer: 1
+  use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
-  disableDepthAndStencilBuffers: 0
+  disableDepthAndStencilBuffers: 1
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 0
   androidUseSwappy: 1
@@ -123,7 +123,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 3B
+  bundleVersion: 5.0B
   preloadedAssets:
   - {fileID: 5869395420550440065, guid: bf000c2c81680194abf650c4ef9d544d, type: 3}
   - {fileID: 8544100401732769958, guid: 47a734591b11f5d4a91ba0e12b5432cd, type: 3}
@@ -800,10 +800,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 49342865-dad8-48c5-81d7-e324d97657e5
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: MOVOID
+  organizationId: somehalaldev79
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

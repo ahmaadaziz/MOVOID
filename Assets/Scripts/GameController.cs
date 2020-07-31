@@ -5,51 +5,61 @@ using System.Collections;
 using EZCameraShake;
 public class GameController : MonoBehaviour
 {
+    private AudioSource explosionSource;
+    private GameObject explotionObj;
+    public GameObject level0;
     public Button pauseButton;
     private CanvasGroup hbarCanvas;
     private bool restartStarted;
     public bool vibrate;
     private ParticleSystem explosion;
     public bool decHealth = false;
-     private NumberAnimation numberAnimation;
-     public float damageAmount;
-     private GameObject playerCube;
-     private Cube cube;
-     public float HighScore;
-     public float maxHealth = 100f;
-     public float currentHealth;
-     public HealthBar healthBar;
-     private void Start() 
-     {
-         hbarCanvas = GameObject.FindGameObjectWithTag("hbarcanvas").GetComponent<CanvasGroup>();
-         playerCube = GameObject.FindGameObjectWithTag("playercube");
-         cube = GameObject.Find("Player Cube").GetComponent<Cube>();
-         explosion = GameObject.FindGameObjectWithTag("explosion").GetComponent<ParticleSystem>();
-         currentHealth = maxHealth;
-         healthBar.SetMaxHealth(maxHealth);
-         numberAnimation = gameObject.GetComponent<NumberAnimation>();
-         damageAmount = 5f;
-         decHealth = false;
-         restartStarted = true;
-         vibrate = true;
-     }
-     private void FixedUpdate() 
-     {
-        if (cube.isMoving && decHealth)
+    private NumberAnimation numberAnimation;
+    public float damageAmount;
+    private GameObject playerCube;
+    public float HighScore;
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public HealthBar healthBar;
+    private Vector3 levelSpawnPos;
+    private void Awake() 
+    {
+        levelSpawnPos = new Vector3(8.533161f,5.552793f,32.25724f);
+        Instantiate(level0,levelSpawnPos,Quaternion.identity);
+    }
+    private void Start() 
+    {
+        hbarCanvas = GameObject.FindGameObjectWithTag("hbarcanvas").GetComponent<CanvasGroup>();
+        playerCube = GameObject.FindGameObjectWithTag("playercube");
+        explotionObj = GameObject.FindGameObjectWithTag("explosion");
+        explosion = explotionObj.GetComponent<ParticleSystem>();
+        explosionSource = explotionObj.GetComponent<AudioSource>(); 
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        numberAnimation = gameObject.GetComponent<NumberAnimation>();
+        damageAmount = 5.5f;
+        decHealth = false;
+        restartStarted = true;
+        vibrate = true;
+    }
+    private void Update() 
+    {
+        if (decHealth)
         {
             TakeDamage(damageAmount * Time.unscaledDeltaTime); 
         }
         if (currentHealth < 0 && restartStarted)
         {
             restartStarted = false;
+            StopCoroutine(Restart());
             StartCoroutine(Restart());
         }
         if (Input.GetKey(KeyCode.Escape))
         {
             pauseButton.onClick.Invoke();
         }
-     }
-     public void IncreaseHighScore(float score)
+    }
+    public void IncreaseHighScore(float score)
     {
         HighScore = HighScore + score;
         numberAnimation.AddToScore(score);
@@ -66,13 +76,14 @@ public class GameController : MonoBehaviour
     IEnumerator Restart()
     {
         explosion.Play(true);
+        explosionSource.Play();
         Handheld.Vibrate();
         CameraShaker.Instance.ShakeOnce(4f,4f,0.1f,1f);
         playerCube.SetActive(false);
         LeanTween.alphaCanvas(hbarCanvas,0.0f,0.01f);
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene(0);
-        StopCoroutine("Restart");
+        StopCoroutine(Restart());
     }
     public void SetVibration(bool shouldVibrate)
     {

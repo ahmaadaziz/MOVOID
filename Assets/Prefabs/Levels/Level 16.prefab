@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &677085098
 Transform:
@@ -112,7 +112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &995976977
 Transform:
@@ -239,7 +239,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &1195904091
 Transform:
@@ -366,7 +366,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &1222905631
 Transform:
@@ -493,7 +493,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &1434262630
 Transform:
@@ -620,7 +620,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &1489343402
 Transform:
@@ -747,7 +747,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &1504025081
 Transform:
@@ -871,7 +871,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &4774746714301398574
 Transform:
@@ -967,7 +967,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &4944876991627373258
 Transform:
@@ -1095,7 +1095,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &888575709279058857
 Transform:
@@ -1198,7 +1198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &8058476864669663992
 Transform:
@@ -1250,7 +1250,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 5
   m_IsActive: 1
 --- !u!4 &4071046671486972586
 Transform:
@@ -1438,6 +1438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invert Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 6717839202002268750, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7737701968363061341, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1512,6 +1517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invert Controls (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717839202002268750, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7737701968363061341, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
         type: 3}
@@ -1588,6 +1598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invert Controls (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6717839202002268750, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7737701968363061341, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1662,6 +1677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invert Controls (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717839202002268750, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7737701968363061341, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
         type: 3}
@@ -1878,6 +1898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Time Stop
       objectReference: {fileID: 0}
+    - target: {fileID: 8202948426337085038, guid: 18f65ba0427e3364594d840ca7fd4a9a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f65ba0427e3364594d840ca7fd4a9a, type: 3}
 --- !u!4 &96505905854794742 stripped
@@ -1897,6 +1922,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ResetScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906097686553757412, guid: 0a77177e8d0aecd43b514432ccc9c766,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7470897103244227831, guid: 0a77177e8d0aecd43b514432ccc9c766,
         type: 3}
@@ -2143,6 +2173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Invert Controls (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717839202002268750, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7737701968363061341, guid: 741ce5840c282ad4d8d2f80f8de6b1f4,
         type: 3}

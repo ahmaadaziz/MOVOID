@@ -19,7 +19,8 @@ public class GoSlow : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) 
     {
-        StartCoroutine("EnableSlow");
+        StopCoroutine(EnableSlow());
+        StartCoroutine(EnableSlow());
     }
     IEnumerator EnableSlow()
     {
@@ -37,7 +38,7 @@ public class GoSlow : MonoBehaviour
         cube.speed = initialSpeed;
         cube.horizontalSpeed = initialHSpeed;
         isSlow = true;
-        StopCoroutine("EnableSlow");
+        StopCoroutine(EnableSlow());
     }
     private void SetNewMaterial()
     {

@@ -8,6 +8,10 @@ public class StopReturn : MonoBehaviour
         {
             boxCollider.isTrigger = true;
         }
+        if (transform.parent.name == "Level 0(Clone)")
+        {
+            boxCollider.isTrigger = false;
+        }
     }
     private void OnTriggerExit(Collider other) 
     {

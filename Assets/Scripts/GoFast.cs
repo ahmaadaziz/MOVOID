@@ -14,19 +14,18 @@ public class GoFast : MonoBehaviour
     private void Start() 
     {
         playerCube = GameObject.Find("Player Cube");
-        Debug.Log(playerCube.name);
         cube = playerCube.GetComponent<Cube>();
         playerMesh = playerCube.GetComponentInChildren<MeshRenderer>();   
     }
     private void OnTriggerExit(Collider other) 
     {
-        StartCoroutine("EnableFast");
+        StopCoroutine(EnableFast());
+        StartCoroutine(EnableFast());
     }
     IEnumerator EnableFast()
     {
         if (isFast)
         {
-            Debug.Log("Done");
             initialHSpeed = cube.horizontalSpeed;
             initialSpeed = cube.speed;
             SetNewMaterial();
@@ -39,17 +38,14 @@ public class GoFast : MonoBehaviour
         cube.speed = initialSpeed;
         cube.horizontalSpeed = initialHSpeed;
         isFast = true;
-        Debug.Log("Reverted");
-        StopCoroutine("EnableFast");
+        StopCoroutine(EnableFast());
     }
     private void SetNewMaterial()
     {
         playerMesh.sharedMaterial = fastMaterial;
-        Debug.Log("Material Changed");
     }
     private void SetOriginalMaterial()
     {
         playerMesh.sharedMaterial = originalMat;
-        Debug.Log("Material Changed Back");
     }
 }
