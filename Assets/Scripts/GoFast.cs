@@ -19,20 +19,21 @@ public class GoFast : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) 
     {
-        StopCoroutine(EnableFast());
-        StartCoroutine(EnableFast());
+        if (isFast)
+        {
+            StopCoroutine(EnableFast());
+            StartCoroutine(EnableFast());
+        }
     }
     IEnumerator EnableFast()
     {
-        if (isFast)
-        {
-            initialHSpeed = cube.horizontalSpeed;
-            initialSpeed = cube.speed;
-            SetNewMaterial();
-            cube.speed = cube.speed*1.4f;
-            cube.horizontalSpeed = cube.horizontalSpeed*1.4f;
-            isFast = false;
-        }
+        
+        initialHSpeed = cube.horizontalSpeed;
+        initialSpeed = cube.speed;
+        SetNewMaterial();
+        cube.speed = cube.speed*1.6f;
+        cube.horizontalSpeed = cube.horizontalSpeed*1.6f;
+        isFast = false;
         yield return new WaitForSeconds(3f);
         SetOriginalMaterial();
         cube.speed = initialSpeed;

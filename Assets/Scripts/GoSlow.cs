@@ -19,20 +19,20 @@ public class GoSlow : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) 
     {
-        StopCoroutine(EnableSlow());
-        StartCoroutine(EnableSlow());
+        if (isSlow)
+        {
+            StopCoroutine(EnableSlow());
+            StartCoroutine(EnableSlow());
+        }
     }
     IEnumerator EnableSlow()
     {
-        if (isSlow)
-        {
-            initialHSpeed = cube.horizontalSpeed;
-            initialSpeed = cube.speed;
-            SetNewMaterial();
-            cube.speed = cube.speed/2;
-            cube.horizontalSpeed = cube.horizontalSpeed/2;
-            isSlow = false;
-        }
+        initialHSpeed = cube.horizontalSpeed;
+        initialSpeed = cube.speed;
+        SetNewMaterial();
+        cube.speed = cube.speed/2.3f;
+        cube.horizontalSpeed = cube.horizontalSpeed/2.3f;
+        isSlow = false;
         yield return new WaitForSeconds(3f);
         SetOriginalMaterial();
         cube.speed = initialSpeed;

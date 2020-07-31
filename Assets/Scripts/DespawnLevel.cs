@@ -6,11 +6,16 @@ public class DespawnLevel : MonoBehaviour
     private void Start() 
     {
         cube = GameObject.Find("Player Cube").GetComponent<Cube>();
-        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();  
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>(); 
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
+        cube.isInverted = false; 
     }
     private void OnTriggerExit(Collider other) 
     {
-        cube.speed += 0.35f;
+        cube.speed += 17.5f;
+        cube.horizontalSpeed += 2.5f;
         gameController.damageAmount += 0.01f;
         Destroy(transform.parent.gameObject);
     }

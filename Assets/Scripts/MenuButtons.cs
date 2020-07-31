@@ -76,6 +76,7 @@ public class MenuButtons : MonoBehaviour
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+
     }
     public void SloMoPointerDown()
     {

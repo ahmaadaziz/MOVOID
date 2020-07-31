@@ -9,7 +9,7 @@ public class PassSphere : MonoBehaviour
     {
         menuButtons = GameObject.FindGameObjectWithTag("InGameCanvas").GetComponent<MenuButtons>();
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        rate = 0.05f;
+        rate = 0.07f;
         if (menuButtons.gameStarted)
         {
             decSize = true;

@@ -17,21 +17,21 @@ public class SpawnLevel : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) 
     {
-         SpawnNxtLvl(cube.i);
-         if (cube.i == 17)
-         {
-             finishedLevels = true;
-         }
-         if (finishedLevels)
-         {
-             cube.i = Random.Range(5,17);
-         }
-         else if(!finishedLevels)
-         {
-             cube.i++;
-         }
-         cube.incPosBy = cube.incPosBy + 82f;
-         Destroy(gameObject);
+        SpawnNxtLvl(cube.i);
+        if (cube.i == 16)
+        {
+            finishedLevels = true;
+        }
+        if (finishedLevels)
+        {
+            cube.i = Random.Range(5,17);
+        }
+        else
+        {
+            cube.i++;
+        }
+        cube.incPosBy = cube.incPosBy + 82f;
+        Destroy(gameObject);
     }
     private void SpawnNxtLvl(int index)
     {

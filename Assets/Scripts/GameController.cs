@@ -3,8 +3,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using EZCameraShake;
+using UnityEngine.Advertisements;
 public class GameController : MonoBehaviour
 {
+    private int deaths;
+    private string GooglePlayID = "3740809";
+    bool testMode = true;
     private AudioSource explosionSource;
     private GameObject explotionObj;
     public GameObject level0;
@@ -29,6 +33,7 @@ public class GameController : MonoBehaviour
     }
     private void Start() 
     {
+        Advertisement.Initialize(GooglePlayID,testMode);
         hbarCanvas = GameObject.FindGameObjectWithTag("hbarcanvas").GetComponent<CanvasGroup>();
         playerCube = GameObject.FindGameObjectWithTag("playercube");
         explotionObj = GameObject.FindGameObjectWithTag("explosion");
@@ -41,6 +46,10 @@ public class GameController : MonoBehaviour
         decHealth = false;
         restartStarted = true;
         vibrate = true;
+        if (PlayerPrefs.GetInt("ads",0) == 3 || PlayerPrefs.GetInt("ads",0) % 3 == 0 )
+        {
+            Advertisement.Show();
+        }
     }
     private void Update() 
     {
@@ -50,6 +59,8 @@ public class GameController : MonoBehaviour
         }
         if (currentHealth < 0 && restartStarted)
         {
+            deaths = PlayerPrefs.GetInt("ads",0) + 1;
+            PlayerPrefs.SetInt("ads",deaths);
             restartStarted = false;
             StopCoroutine(Restart());
             StartCoroutine(Restart());
@@ -82,6 +93,7 @@ public class GameController : MonoBehaviour
         playerCube.SetActive(false);
         LeanTween.alphaCanvas(hbarCanvas,0.0f,0.01f);
         yield return new WaitForSecondsRealtime(2f);
+        //Advertisement.Show();
         SceneManager.LoadScene(0);
         StopCoroutine(Restart());
     }

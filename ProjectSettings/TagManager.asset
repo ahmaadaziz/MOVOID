@@ -19,6 +19,7 @@ TagManager:
   - pausebutton
   - instructionspanel
   - closebutton
+  - dropdown
   layers:
   - Default
   - TransparentFX

@@ -12,11 +12,12 @@ public class Cube : MonoBehaviour
     public float horizontalSpeed;
     public int i;
     public float incPosBy = 82f;
+    private float previousSpeed;
     private void Start()
     {
         i = 1;
         horizontalSpeed = 300f;
-        speed = 370f;
+        speed = 400f;
         isInverted = false;
         isTimeStopped = false;
         changeProfile = false;
@@ -25,24 +26,28 @@ public class Cube : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) 
     {
+        previousSpeed = speed;
         speed = 0f;    
     }
     private void OnCollisionExit(Collision other) 
     {
-        speed = 370f;  
+        speed = previousSpeed;  
     }
     private void FixedUpdate() 
     {
         if (menuButtons.gameStarted)
         {
-        mH = joystick.Horizontal * horizontalSpeed * Time.fixedDeltaTime;
-        mV = speed * Time.fixedDeltaTime;
-        if (isInverted)
-        {
-             mV = mV*-1;
-             mH = mH*-1f;
+            mH = joystick.Horizontal * horizontalSpeed * Time.fixedDeltaTime;
+            mV = speed * Time.fixedDeltaTime;
+            if (isInverted)
+            {
+                mH = mH*-1f;
+            }
+            rb.velocity = new Vector3 (mH , 0, mV );
         }
-        rb.velocity = new Vector3 (mH , 0, mV );
+        else
+        {
+            rb.velocity = new Vector3(0,0,0);
         }
     }
 }
