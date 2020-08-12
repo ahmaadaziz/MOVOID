@@ -17,7 +17,7 @@ public class Cube : MonoBehaviour
     {
         i = 1;
         horizontalSpeed = 300f;
-        speed = 400f;
+        speed = 475f;
         isInverted = false;
         isTimeStopped = false;
         changeProfile = false;

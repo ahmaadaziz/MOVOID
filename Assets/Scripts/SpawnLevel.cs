@@ -3,12 +3,11 @@ public class SpawnLevel : MonoBehaviour
 {
     private bool finishedLevels;
     private GameObject playerCube;
-    private GameObject currentLvl;
     private Cube cube;
-    public GameObject[] Levels;
     private float currentLvlPos;
     private float nextLvlPos;
     private Vector3 spawnPos;
+    public GameObject[] Levels;
     private void Start() 
     {
         playerCube = GameObject.Find("Player Cube");
@@ -26,7 +25,7 @@ public class SpawnLevel : MonoBehaviour
         {
             cube.i = Random.Range(5,17);
         }
-        else
+        else if (!finishedLevels)
         {
             cube.i++;
         }

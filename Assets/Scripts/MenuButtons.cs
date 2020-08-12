@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 public class MenuButtons : MonoBehaviour
 {
+    public GameObject panelBackground;
     public GameObject instructionsPanel;
     public GameObject closeButton;
     public bool gameStarted;
@@ -44,6 +45,7 @@ public class MenuButtons : MonoBehaviour
         }
         else
         {
+            panelBackground.SetActive(true);
             instructionsPanel.SetActive(true);
             closeButton.SetActive(true);
         }

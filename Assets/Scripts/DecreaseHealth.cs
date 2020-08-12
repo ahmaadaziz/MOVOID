@@ -8,6 +8,7 @@ public class DecreaseHealth : MonoBehaviour
     private Cube cube;
     private Volume ppVolume;
     public VolumeProfile damageProfile;
+    public VolumeProfile mainProfile;
     public GameController gameController;
     private float damageAmount = 8f;
     private void Start() 
@@ -34,6 +35,7 @@ public class DecreaseHealth : MonoBehaviour
         cube.changeProfile = false;
         ppVolume.profile = damageProfile;
         yield return new WaitForSecondsRealtime(0.09f);
+        ppVolume.profile = mainProfile;
         cube.changeProfile = true;
         Destroy(gameObject);
     }

@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageProfile: {fileID: 11400000, guid: d042dba043d7cef4d9f3b9f59dfbb6d5, type: 2}
+  mainProfile: {fileID: 11400000, guid: 5511dcae0a771174abf6b8f7ebda4cfb, type: 2}
   gameController: {fileID: 0}
 --- !u!1 &1949216110
 GameObject:
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageProfile: {fileID: 11400000, guid: d042dba043d7cef4d9f3b9f59dfbb6d5, type: 2}
+  mainProfile: {fileID: 11400000, guid: 5511dcae0a771174abf6b8f7ebda4cfb, type: 2}
   gameController: {fileID: 0}
 --- !u!1 &1027731441471350869
 GameObject:
@@ -1556,6 +1558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageProfile: {fileID: 11400000, guid: d042dba043d7cef4d9f3b9f59dfbb6d5, type: 2}
+  mainProfile: {fileID: 11400000, guid: 5511dcae0a771174abf6b8f7ebda4cfb, type: 2}
   gameController: {fileID: 0}
 --- !u!1 &4315677198651337415
 GameObject:
@@ -1665,6 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageProfile: {fileID: 11400000, guid: d042dba043d7cef4d9f3b9f59dfbb6d5, type: 2}
+  mainProfile: {fileID: 11400000, guid: 5511dcae0a771174abf6b8f7ebda4cfb, type: 2}
   gameController: {fileID: 0}
 --- !u!1 &4749371405748709881
 GameObject:
@@ -1988,6 +1992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageProfile: {fileID: 11400000, guid: d042dba043d7cef4d9f3b9f59dfbb6d5, type: 2}
+  mainProfile: {fileID: 11400000, guid: 5511dcae0a771174abf6b8f7ebda4cfb, type: 2}
   gameController: {fileID: 0}
 --- !u!1001 &1022667711294849270
 PrefabInstance:

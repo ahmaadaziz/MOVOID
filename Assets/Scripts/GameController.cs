@@ -6,9 +6,8 @@ using EZCameraShake;
 using UnityEngine.Advertisements;
 public class GameController : MonoBehaviour
 {
-    private int deaths;
     private string GooglePlayID = "3740809";
-    bool testMode = true;
+    bool testMode = false;
     private AudioSource explosionSource;
     private GameObject explotionObj;
     public GameObject level0;
@@ -46,9 +45,13 @@ public class GameController : MonoBehaviour
         decHealth = false;
         restartStarted = true;
         vibrate = true;
-        if (PlayerPrefs.GetInt("ads",0) == 3 || PlayerPrefs.GetInt("ads",0) % 3 == 0 )
+        if ((PlayerPrefs.GetInt("ads",0))%3==0 && Advertisement.IsReady())
         {
             Advertisement.Show();
+        }
+        else
+        {
+            PlayerPrefs.SetInt("ads",PlayerPrefs.GetInt("ads",0)+1);
         }
     }
     private void Update() 
@@ -59,8 +62,7 @@ public class GameController : MonoBehaviour
         }
         if (currentHealth < 0 && restartStarted)
         {
-            deaths = PlayerPrefs.GetInt("ads",0) + 1;
-            PlayerPrefs.SetInt("ads",deaths);
+            PlayerPrefs.SetInt("ads",PlayerPrefs.GetInt("ads",0)+1);
             restartStarted = false;
             StopCoroutine(Restart());
             StartCoroutine(Restart());
@@ -93,7 +95,6 @@ public class GameController : MonoBehaviour
         playerCube.SetActive(false);
         LeanTween.alphaCanvas(hbarCanvas,0.0f,0.01f);
         yield return new WaitForSecondsRealtime(2f);
-        //Advertisement.Show();
         SceneManager.LoadScene(0);
         StopCoroutine(Restart());
     }

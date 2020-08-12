@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Ahmad'sGame
+  companyName: cyruslabs
   productName: MOVOID
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -123,7 +123,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 6.2B
+  bundleVersion: 1
   preloadedAssets:
   - {fileID: 5869395420550440065, guid: bf000c2c81680194abf650c4ef9d544d, type: 3}
   - {fileID: 8544100401732769958, guid: 47a734591b11f5d4a91ba0e12b5432cd, type: 3}
@@ -177,7 +177,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.AhmadsGame.MOVOID
+    Android: com.cyruslabs.MOVOID
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
