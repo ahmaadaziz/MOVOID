@@ -129,12 +129,9 @@ PlayerSettings:
   - {fileID: 8544100401732769958, guid: 47a734591b11f5d4a91ba0e12b5432cd, type: 3}
   - {fileID: 8648587783684342088, guid: 7783f275832e6c942abb86eb70c62ffb, type: 3}
   - {fileID: 6075582806614023298, guid: edd8734c65477574b85c6ec263c8190f, type: 3}
-  - {fileID: 653495709723771696, guid: 8bd9e35dd06115b43ba764e2f0bacd62, type: 3}
+  - {fileID: 8208486514640027783, guid: b4d312cd0a970564e8af92dbb3874135, type: 3}
   - {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   - {fileID: 1000011210275196, guid: fa35d75604d172d48b7a6b62a07c7dbf, type: 3}
-  - {fileID: 6894677021238683099, guid: 15973ca4ea7c7154383202cf850c97a1, type: 3}
-  - {fileID: 5495089649205712953, guid: 1e708a6a81a8c2642a034a092905aa0a, type: 3}
-  - {fileID: 8208486514640027783, guid: b4d312cd0a970564e8af92dbb3874135, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -181,7 +178,7 @@ PlayerSettings:
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 2
   aotOptions: 
   stripEngineCode: 1
@@ -253,18 +250,18 @@ PlayerSettings:
   clonedFromGUID: 9870af204204ab84596f8a656f2f2ce6
   templatePackageId: com.unity.template.universal@7.3.1
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: '{inproject}: user.keystore'
+  AndroidKeyaliasName: official
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -714,6 +711,7 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   platformArchitecture: {}
   scriptingBackend:
+    Android: 1
     Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
